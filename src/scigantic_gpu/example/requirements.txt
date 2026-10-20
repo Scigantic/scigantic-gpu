@@ -1,0 +1,2 @@
+# One package per line. Installed with pip before train.py runs.
+# torch, transformers, pandas, scikit-learn, scipy and boto3 are already present.
