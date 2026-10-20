@@ -44,6 +44,12 @@ def test_script_args_after_double_dash():
     assert rc == 0
     assert captured["entry"] == "train.py" and captured["yes"] is True
     assert captured["args"] == ["--epochs", "3"]
+    captured.clear()
+    assert main(["run", ".", "--", "300"]) == 0
+    assert captured["args"] == ["300"] and captured["entry"] == "train.py"
+    captured.clear()
+    assert main(["run", ".", "-y"]) == 0
+    assert captured["args"] == []
 
 
 def test_example_writes_runnable_starter(tmp_path: Path, capsys):

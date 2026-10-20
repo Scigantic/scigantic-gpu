@@ -402,7 +402,16 @@ is reserved against your budget first and settles to billed minutes at the end.
     s.add_argument("-o", "--out", help="file to write (default: <job>.tar.gz)")
     s.set_defaults(fn=cmd_download)
 
+    # Everything after a bare `--` goes to the script untouched. argparse only
+    # does this reliably from Python 3.13 on, so split it off here first.
+    argv = list(sys.argv[1:] if argv is None else argv)
+    script_args = []
+    if "--" in argv:
+        i = argv.index("--")
+        argv, script_args = argv[:i], argv[i + 1:]
     a = p.parse_args(argv)
+    if hasattr(a, "args"):
+        a.args = list(a.args or []) + script_args
     try:
         return a.fn(a)
     except KeyboardInterrupt:
