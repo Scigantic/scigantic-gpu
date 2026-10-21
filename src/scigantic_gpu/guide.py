@@ -30,8 +30,8 @@ COST AND THE CAP
   the reservation settles to the minutes actually billed. Runs stop on their
   own at --max-hours; `stop` ends one early. Two runs at once, four hours each.
 
-  You get an email when a run finishes or fails. Ask us to raise your budget
-  if the default is too small for real work.
+  You get an email when a run finishes or fails. GPU access and budgets are
+  set per account; write to aaron@scigantic.com to request or raise yours.
 
 INSTANCES
   ml.g5.xlarge    A10G 24 GB, 4 vCPU, 16 GB RAM    default

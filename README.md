@@ -16,8 +16,9 @@ scigantic-gpu download ft-gpu-...
 is what Homebrew and Debian Pythons require. Plain `pip install scigantic-gpu`
 works inside a virtualenv. The tool has no dependencies.
 
-You need a Scigantic account for the email you log in with. Sign up at
-https://scigantic.com/signup if you do not have one.
+You need a Scigantic account for the email you log in with, and GPU access
+turned on for it. Sign up at https://scigantic.com/signup, then write to
+aaron@scigantic.com to request access. `scigantic-gpu account` shows your budget.
 
 The example trains a tiny network for a few seconds and writes `model.pt`
 and `metrics.json` to the output directory. Its `train.py` is commented and
@@ -52,8 +53,8 @@ price times `--max-hours`, plus a 10 percent margin) must fit in what is
 left. When the run ends the reservation settles to the minutes AWS billed.
 Runs stop on their own at `--max-hours`; `scigantic-gpu stop` ends one early.
 
-You get an email when a run finishes or fails. Ask us to raise your budget if
-the default is too small for real work.
+You get an email when a run finishes or fails. Budgets are set per account
+and are a lifetime total; write to us to raise yours.
 
 ## Your own script
 
