@@ -7,14 +7,21 @@ name = "scigantic-gpu"
 version = "0.1.1"
 description = "Run your own Python script on a GPU in Scigantic's cloud from the terminal, with a per-account spending cap."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "Proprietary. See LICENSE." }
 authors = [{ name = "Scigantic" }]
 keywords = ["gpu", "sagemaker", "scigantic", "cli"]
 classifiers = [
   "License :: Other/Proprietary License",
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Environment :: Console",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
 ]
 dependencies = []
 
@@ -22,6 +29,7 @@ dependencies = []
 Homepage = "https://github.com/Scigantic/scigantic-gpu"
 Repository = "https://github.com/Scigantic/scigantic-gpu"
 Issues = "https://github.com/Scigantic/scigantic-gpu/issues"
+Documentation = "https://github.com/Scigantic/scigantic-gpu#readme"
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
